@@ -1,0 +1,8 @@
+# Auto gen files
+
+yarn.lock
+yarn-error.log
+
+# Auto gen dirs
+
+node_modules/*

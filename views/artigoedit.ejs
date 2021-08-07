@@ -1,0 +1,38 @@
+<%- include('partials/header') %>
+
+<div id="artigos">
+
+    <div id="cadastro-artigo-novo">
+
+        <h2>Editar Artigo</h2>
+
+        <form action="/artigos/<%= artigo._id %>?_method=PATCH" method="POST">
+            
+        <div id="cadastro-artigo">
+            <label for="cadastro-artigo" id="cadastro-artigo-label">Dados do Artigo</label>
+
+            <div><label for="titulo">Título:</label></div>
+            <div><input type="text" name="titulo" id="titulo" class="input-cadastro" value="<%= artigo.titulo %>" placeholder="Título" required></div>
+            <div><label for="imagem">Imagem:</label></div>
+            <div><input type="text" id="imagem" name="imagem" class="input-cadastro" value="<%= artigo.imagem %>" placeholder="Nome do arquivo da imagem" required></div>
+            <div><label for="texto">Texto:</label></div>
+            <div><textarea name="texto" id="texto" class="input-cadastro" rows="5" placeholder="Texto do artigo"><%= artigo.texto %></textarea></div>
+
+        </div>
+        
+        <div>
+            <a href="/administracao"><button class="botao-cancelar" type="button">Cancelar</button></a>
+            <button id="botao-novo-artigo" class="botao-novo">Salvar</button>
+        </div>
+
+        </form>
+
+        <form action="/artigos/<%= artigo._id %>?_method=DELETE" method="POST">
+            <button id="botao-novo-artigo" class="botao-deletar" onclick="return confirm('Tens certeza que deseja APAGAR este artigo?')">Apagar</button>
+        </form>
+    
+    </div>
+    
+</div>
+
+<%- include('partials/footer') %>

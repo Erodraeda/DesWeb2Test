@@ -1,0 +1,29 @@
+<%- include('partials/header') %>
+
+<div id="artigos">
+
+        <% for (artigo of artigos) { %> 
+
+        <% const meses = ['JANEIRO', 'FEVEREIRO', 'MARÇO', 'ABRIL', 'MAIO', 'JUNHO', 'JULHO', 'AGOSTO', 'SETEMBRO', 'OUTUBRO', 'NOVEMBRO', 'DEZEMBRO'] %> 
+
+        <div id="artigos-publicados">
+
+            <p id="data"><%= artigo.dia %> <%= meses[artigo.mes] %> <%= artigo.ano %></p>
+            
+            <div id="link-artigos-publicados"><a href="/artigos/<%= artigo._id %>"><%= artigo.titulo %></a></div>
+
+            <img src="/images/<%= artigo.imagem %>" alt="/" id="imagem-direita">
+
+            <p id="tamanho-maximo" class="texto-artigo"><%= artigo.texto %></p>
+
+            <hr id="hr-artigos">
+
+        </div>
+
+        <% } %> 
+    
+</div>
+
+<script type="text/javascript" src="js/script.js"></script>
+
+<%- include('partials/footer') %>

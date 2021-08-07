@@ -1,0 +1,182 @@
+body{
+    width: 750px;
+    margin: 0 auto;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+#header{
+    display: grid;
+    background-color: #ccc;
+    text-align: center;
+    align-items: center;
+    height: 125px;
+    margin: 1em;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+#footer{
+    display: grid;
+    background-color: #ccc;
+    text-align: end;
+    align-items: center;
+    height: 75px;
+    margin: 1em;
+    padding-right: 2em;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-style: italic;
+}
+
+#artigos{
+    border: 1em solid #ccc;
+    padding: 1em;
+    margin: 1em;
+}
+
+.remove-dots {
+    list-style-type: none;
+}
+
+#botao-cadastro{
+    margin-top:1em;
+}
+
+#botao-novo-artigo {
+    margin-bottom: 15px;
+}
+
+.input-cadastro{
+    width:100%;
+    margin-bottom:5px;
+}
+
+#cadastro-artigo{
+    border: solid 3px #ccc;
+    padding: 1em;
+    padding-bottom: 8px;
+}
+
+#cadastro-artigo-label{
+    position:absolute;
+    top:249px;
+    width: 125px;
+    background-color:white;
+    text-align: center;
+}
+
+.botao-cancelar{
+    color: red;
+    margin-top: 1em;
+}
+
+.botao-novo{
+    color: green;
+    float:right;
+    margin-top: 1em;
+}
+
+.botao-deletar{
+    background-color: red;
+    margin-top: 10px;
+    color: white;
+}
+
+#hr-artigos {
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, white, #ccc, white);
+}
+
+#data {
+    color: #3498db;
+    font-size: 16px;
+}
+
+#imagem-direita {
+    float:right;
+    margin: 20px 10px 10px 10px;
+    flex-wrap: wrap;
+}
+
+#imagem-esquerda {
+    float:left;
+    margin: 18px 10px 20px 0;
+    flex-wrap: wrap;
+}
+
+.texto-artigo {
+    white-space: pre-line;
+}
+
+#link-artigos-publicados {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#link-artigos-publicados a:link {
+    text-decoration: none;
+    color: black;
+}
+
+#link-artigos-publicados a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+#link-artigos-publicados a:active {
+    text-decoration: none;
+}
+
+#link-artigos-publicados a:hover {
+    text-decoration: underline;
+}
+
+#link-edicao-artigos a:link {
+    text-decoration: none;
+    color: black;
+}
+
+#link-edicao-artigos a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+#link-edicao-artigos a:active {
+    text-decoration: none;
+}
+
+#link-edicao-artigos a:hover {
+    text-decoration: underline;
+}
+
+#botao-voltar{
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 0;
+    margin-left: 570px;
+}
+
+#botao-voltar:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#deixe-seu-comentario {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#comentario {
+    width: 630px;
+}
+
+#nome-comentario {
+    width: 630px;
+}
+
+.botao-enviar {
+    margin-top: 10px;
+}

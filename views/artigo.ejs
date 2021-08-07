@@ -1,0 +1,45 @@
+<%- include('partials/header') %>
+
+<div id="artigos">
+
+        <% const meses = ['JANEIRO', 'FEVEREIRO', 'MARÇO', 'ABRIL', 'MAIO', 'JUNHO', 'JULHO', 'AGOSTO', 'SETEMBRO', 'OUTUBRO', 'NOVEMBRO', 'DEZEMBRO'] %> 
+
+        <div id="artigos-publicados">
+
+            <p id="data"><%= artigo.dia %> <%= meses[artigo.mes] %> <%= artigo.ano %></p>
+            
+            <div id="link-artigos-publicados"><%= artigo.titulo %></div>
+
+            <img src="/images/<%= artigo.imagem %>" alt="/" id="imagem-esquerda">
+
+            <p class="texto-artigo"><%= artigo.texto %></p>
+
+            <a href="/artigos"><button id="botao-voltar">VOLTAR</button></a>
+
+            <hr id="hr-artigos">
+
+            <p id="deixe-seu-comentario">DEIXE SEU COMENTÁRIO</p>
+
+            <form action="/comentario" method="POST">
+
+            <div><textarea name="comentario" id="comentario" class="input-cadastro" rows="5" placeholder="Digite aqui seu comentário"></textarea></div>
+            <div><input type="text" name="nome" id="nome-comentario" class="input-cadastro" placeholder="Digite aqui seu nome" required></div>
+            <input type="text" name="idpost" value="<%= artigo._id %>" hidden>
+
+            <button id="botao-voltar" class="botao-enviar">ENVIAR</button>
+
+            </form>
+
+            <p id="deixe-seu-comentario">COMENTÁRIOS</p>
+
+            <% for (comentario of comentarios) { %> 
+                <p><%= comentario.nome %> - <%= comentario.dia %>/<%= comentario.mes %>/<%= comentario.ano %> às <%= comentario.horario %></p>
+                <p id="texto-artigo"><%= comentario.comentario %></p>
+                <br><br>
+            <% } %>
+
+        </div>
+
+</div>
+
+<%- include('partials/footer') %>

@@ -1,0 +1,29 @@
+<%- include('partials/header') %>
+
+<div id="artigos">
+
+    <div id="administracao">
+
+    <h2>Administração do Blog</h2>
+
+    <div><a href="/artigos/new"><button id="botao-novo-artigo">Cadastrar novo Artigo</button></a></div>
+
+    <div>Editar ou apagar um artigo:</div>
+
+    <ul>
+
+        <% for (artigo of artigos) { %> 
+ 
+            <li id="link-edicao-artigos"><a href="/artigos/<%= artigo._id %>/edit"><%= artigo.titulo %></a></li>
+
+        <% } %> 
+
+    </ul>
+    
+    <div><a href="/logout"><button id="botao-logout">Logout</button></a></div>
+
+    </div>
+
+</div>
+
+<%- include('partials/footer') %>
